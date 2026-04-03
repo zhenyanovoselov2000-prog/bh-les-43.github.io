@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЛесТрейд — Пиломатериалы оптом в Алматы</title>
+  <meta name="description" content="Продажа пиломатериалов оптом и в розницу. Доска, брус, вагонка. Доставка по Казахстану.">
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=general-sans@300,400,500,600&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{--color-bg:#f5f0e8;--color-surface:#faf7f2;--color-surface-2:#fffdfb;--color-surface-offset:#ede8de;--color-surface-offset-2:#e5dfd3;--color-surface-dynamic:#d9d2c5;--color-divider:#cec6b7;--color-border:#c5bca9;--color-text:#1f1a14;--color-text-muted:#6b5f4e;--color-text-faint:#a8998a;--color-text-inverse:#faf7f2;--color-primary:#4a2c0a;--color-primary-hover:#2e1a05;--color-primary-highlight:#e8ddd0;--color-accent:#8a6020;--color-accent-hover:#6b4915;--text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);--text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);--text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--text-hero:clamp(2.8rem,0.5rem + 6.5vw,6.5rem);--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;--radius-sm:0.25rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-xl:1.25rem;--radius-full:9999px;--shadow-sm:0 1px 3px oklch(0.2 0.03 60 / 0.08);--shadow-md:0 4px 14px oklch(0.2 0.03 60 / 0.10);--shadow-lg:0 12px 36px oklch(0.2 0.03 60 / 0.14);--font-display:'Boska',Georgia,serif;--font-body:'General Sans','Helvetica Neue',sans-serif;--content-default:960px;--content-wide:1200px;--transition:180ms cubic-bezier(0.16,1,0.3,1)}
+    [data-theme="dark"]{--color-bg:#16120c;--color-surface:#1c1710;--color-surface-2:#221d15;--color-surface-offset:#1f1a12;--color-surface-offset-2:#26201a;--color-surface-dynamic:#2e2820;--color-divider:#302a22;--color-border:#3d3528;--color-text:#e8dfd2;--color-text-muted:#8a7d6e;--color-text-faint:#5c5248;--color-text-inverse:#1c1710;--color-primary:#c99a5a;--color-primary-hover:#e8b87a;--color-primary-highlight:#2a2218;--color-accent:#d4a855;--color-accent-hover:#e8c075;--shadow-sm:0 1px 3px oklch(0 0 0 / 0.3);--shadow-md:0 4px 14px oklch(0 0 0 / 0.4);--shadow-lg:0 12px 36px oklch(0 0 0 / 0.5)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.6}
+    img{display:block;max-width:100%;height:auto}
+    h1,h2,h3,h4{text-wrap:balance;line-height:1.15;font-family:var(--font-display)}
+    p,li{text-wrap:pretty}
+    a,button,input,textarea,select{font:inherit;color:inherit}
+    button{cursor:pointer;background:none;border:none}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+    ::selection{background:oklch(from var(--color-primary) l c h / 0.2)}
+    a{text-decoration:none;color:inherit;transition:color var(--transition),opacity var(--transition)}
+    a:hover{color:var(--color-accent)}
+    .container{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6)}
+    .container--narrow{max-width:var(--content-default)}
+
+    /* ANNOUNCE */
+    .announce-bar{background:var(--color-accent);color:#fff;text-align:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:500}
+    .announce-bar a{color:#fff;text-decoration:underline}
+
+    /* HEADER */
+    .header{position:sticky;top:0;z-index:100;background:oklch(from var(--color-bg) l c h / 0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-divider);transition:background var(--transition)}
+    .header__inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:var(--space-8)}
+    .logo{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);color:var(--color-text);text-decoration:none;flex-shrink:0}
+    .nav{display:flex;align-items:center;gap:var(--space-8)}
+    .nav a{font-size:var(--text-sm);font-weight:500;color:var(--color-text-muted);transition:color var(--transition)}
+    .nav a:hover{color:var(--color-text)}
+    .header__actions{display:flex;align-items:center;gap:var(--space-3)}
+    .btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:600;transition:background var(--transition),color var(--transition),transform var(--transition);white-space:nowrap}
+    .btn:active{transform:scale(0.97)}
+    .btn--primary{background:var(--color-primary);color:var(--color-text-inverse)}
+    .btn--primary:hover{background:var(--color-primary-hover);color:var(--color-text-inverse)}
+    .btn--ghost{border:1px solid var(--color-border);color:var(--color-text)}
+    .btn--ghost:hover{background:var(--color-surface-offset);color:var(--color-text)}
+    .btn--lg{padding:var(--space-4) var(--space-8);font-size:var(--text-base)}
+    .btn--accent{background:var(--color-accent);color:#fff}
+    .btn--accent:hover{background:var(--color-accent-hover);color:#fff}
+    .btn--white{background:#fff;color:var(--color-primary)}
+    .btn--white:hover{background:oklch(1 0 0 / 0.9);color:var(--color-primary)}
+    .btn--outline-white{border:1px solid oklch(1 0 0 / 0.4);color:#fff}
+    .btn--outline-white:hover{background:oklch(1 0 0 / 0.1);color:#fff}
+    .theme-toggle{width:40px;height:40px;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);border:1px solid var(--color-border);transition:background var(--transition),color var(--transition)}
+    .theme-toggle:hover{background:var(--color-surface-offset);color:var(--color-text)}
+    .burger{display:none;flex-direction:column;gap:5px;width:40px;height:40px;align-items:center;justify-content:center;border-radius:var(--radius-md);border:1px solid var(--color-border)}
+    .burger span{display:block;width:20px;height:2px;background:var(--color-text);border-radius:2px;transition:transform var(--transition),opacity var(--transition)}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;flex-direction:column;gap:var(--space-2);padding:var(--space-4) var(--space-6) var(--space-6);border-top:1px solid var(--color-divider);background:var(--color-surface)}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:var(--space-3) 0;font-size:var(--text-base);font-weight:500;color:var(--color-text-muted);border-bottom:1px solid var(--color-divider)}
+    .mobile-menu a:last-of-type{border-bottom:none}
+    .mobile-menu .btn{margin-top:var(--space-2);width:100%;justify-content:center}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;min-height:92vh;display:flex;flex-direction:column}
+    .hero__main{flex:1;display:flex;align-items:center;position:relative}
+    .hero__bg{position:absolute;inset:0;background-image:url('https://picsum.photos/seed/lumber-forest-wide/1600/900');background-size:cover;background-position:center;filter:brightness(0.42)}
+    .hero__overlay{position:absolute;inset:0;background:linear-gradient(135deg,oklch(0.15 0.04 55 / 0.88) 0%,oklch(0.15 0.04 55 / 0.45) 55%,transparent 100%)}
+    .hero__content{position:relative;z-index:1;padding-block:var(--space-24);max-width:740px}
+    .hero__tag{display:inline-flex;align-items:center;gap:var(--space-2);background:oklch(from var(--color-accent) l c h / 0.22);border:1px solid oklch(from var(--color-accent) l c h / 0.4);color:#e8c880;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:var(--space-6)}
+    .hero__title{font-family:var(--font-display);font-size:var(--text-hero);font-weight:700;color:#fff;line-height:1.05;margin-bottom:var(--space-6)}
+    .hero__title em{font-style:italic;color:#d4a855}
+    .hero__desc{font-size:var(--text-lg);color:oklch(1 0 0 / 0.78);max-width:54ch;margin-bottom:var(--space-10);font-weight:300}
+    .hero__ctas{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+    .hero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:oklch(1 0 0 / 0.1);border-top:1px solid oklch(1 0 0 / 0.1)}
+    .hero__stat{background:oklch(0.12 0.03 55 / 0.65);backdrop-filter:blur(8px);padding:var(--space-8) var(--space-6);text-align:center}
+    .hero__stat-num{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:#d4a855;display:block;margin-bottom:var(--space-2)}
+    .hero__stat-label{font-size:var(--text-sm);color:oklch(1 0 0 / 0.6)}
+
+    /* SECTIONS */
+    section{padding-block:clamp(var(--space-16),8vw,var(--space-32))}
+    .section-label{font-size:var(--text-xs);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-4)}
+    .section-title{font-size:var(--text-2xl);font-weight:700;color:var(--color-text);margin-bottom:var(--space-4);font-family:var(--font-display)}
+    .section-desc{font-size:var(--text-base);color:var(--color-text-muted);max-width:56ch;margin-bottom:var(--space-12)}
+
+    /* ABOUT */
+    .about__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center}
+    .about__image{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow-lg)}
+    .about__image img{width:100%;height:100%;object-fit:cover}
+    .about__badge{position:absolute;bottom:var(--space-4);left:var(--space-4);background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-3) var(--space-5);border-radius:var(--radius-lg);font-size:var(--text-sm);font-weight:600}
+    .about__content .section-desc{max-width:none;margin-bottom:var(--space-8)}
+    .about__features{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-8)}
+    .about__feature{background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5)}
+    .about__feature-icon{font-size:1.5rem;margin-bottom:var(--space-2)}
+    .about__feature h4{font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-1)}
+    .about__feature p{font-size:var(--text-xs);color:var(--color-text-muted)}
+
+    /* CATALOG */
+    .catalog{background:var(--color-surface)}
+    .catalog__header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--space-12);flex-wrap:wrap;gap:var(--space-4)}
+    .catalog__header .section-desc{margin-bottom:0}
+    .catalog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
+    .product-card{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;transition:transform var(--transition),box-shadow var(--transition)}
+    .product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .product-card__img{aspect-ratio:4/3;overflow:hidden;position:relative}
+    .product-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 400ms ease}
+    .product-card:hover .product-card__img img{transform:scale(1.04)}
+    .product-card__tag{position:absolute;top:var(--space-3);left:var(--space-3);background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:600}
+    .product-card__body{padding:var(--space-5) var(--space-6)}
+    .product-card__name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-2)}
+    .product-card__desc{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);max-width:36ch}
+    .product-card__specs{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)}
+    .spec-chip{background:var(--color-surface-offset);border:1px solid var(--color-border);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500}
+    .product-card__footer{display:flex;justify-content:space-between;align-items:center;padding-top:var(--space-4);border-top:1px solid var(--color-divider)}
+    .product-price{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-primary)}
+
+    /* ADVANTAGES */
+    .advantages__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+    .adv-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);display:flex;gap:var(--space-5);align-items:flex-start;transition:box-shadow var(--transition)}
+    .adv-card:hover{box-shadow:var(--shadow-md)}
+    .adv-card--wide{grid-column:span 2}
+    .adv-icon{width:56px;height:56px;flex-shrink:0;background:var(--color-primary-highlight);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+    .adv-card h3{font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-2)}
+    .adv-card p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:44ch}
+
+    /* CTA BANNER */
+    .cta-banner{background:var(--color-primary);padding-block:clamp(var(--space-16),8vw,var(--space-24))}
+    .cta-banner__inner{display:flex;justify-content:space-between;align-items:center;gap:var(--space-8);flex-wrap:wrap}
+    .cta-banner h2{font-size:var(--text-2xl);color:#fff;max-width:22ch}
+    .cta-banner h2 em{font-style:italic;color:#d4a855}
+    .cta-banner p{color:oklch(1 0 0 / 0.7);max-width:40ch;margin-top:var(--space-3)}
+    .cta-banner__actions{display:flex;gap:var(--space-3);flex-wrap:wrap}
+
+    /* CONTACT */
+    .contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:start}
+    .contact__info{display:flex;flex-direction:column;gap:var(--space-6)}
+    .contact__item{display:flex;gap:var(--space-4);align-items:flex-start}
+    .contact__icon{width:44px;height:44px;flex-shrink:0;background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .contact__item-title{font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-1)}
+    .contact__item-text{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .contact__form{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-4)}
+    .form-group{display:flex;flex-direction:column;gap:var(--space-2)}
+    .form-group label{font-size:var(--text-sm);font-weight:500}
+    .form-group input,.form-group textarea,.form-group select{background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);font-size:var(--text-sm);color:var(--color-text);transition:border-color var(--transition);width:100%}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px oklch(from var(--color-primary) l c h / 0.12)}
+    .form-group textarea{resize:vertical;min-height:100px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+    .form__note{font-size:var(--text-xs);color:var(--color-text-faint)}
+    .map-placeholder{background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:var(--radius-xl);aspect-ratio:16/7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-3);color:var(--color-text-muted);margin-top:var(--space-8)}
+    .map-placeholder span{font-size:2rem}
+    .map-placeholder p{font-size:var(--text-sm)}
+
+    /* FOOTER */
+    .footer{background:var(--color-primary);color:oklch(1 0 0 / 0.65);padding-block:var(--space-16)}
+    .footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-12);margin-bottom:var(--space-12)}
+    .footer__brand .logo{color:#fff;margin-bottom:var(--space-4)}
+    .footer__brand p{font-size:var(--text-sm);max-width:30ch}
+    .footer__col h4{font-size:var(--text-sm);font-weight:700;color:#fff;margin-bottom:var(--space-4);letter-spacing:0.04em}
+    .footer__col ul{list-style:none;display:flex;flex-direction:column;gap:var(--space-3)}
+    .footer__col ul li a{font-size:var(--text-sm);color:oklch(1 0 0 / 0.6);transition:color var(--transition)}
+    .footer__col ul li a:hover{color:#d4a855}
+    .footer__bottom{border-top:1px solid oklch(1 0 0 / 0.1);padding-top:var(--space-8);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-4)}
+    .footer__bottom p{font-size:var(--text-xs)}
+    .footer__socials{display:flex;gap:var(--space-3)}
+    .social-btn{width:38px;height:38px;border-radius:var(--radius-full);border:1px solid oklch(1 0 0 / 0.2);display:flex;align-items:center;justify-content:center;color:oklch(1 0 0 / 0.6);transition:background var(--transition),color var(--transition)}
+    .social-btn:hover{background:oklch(1 0 0 / 0.1);color:#d4a855}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){.footer__grid{grid-template-columns:1fr 1fr;gap:var(--space-8)}.footer__brand{grid-column:span 2}}
+    @media(max-width:768px){
+      .nav{display:none}.header__actions .btn--primary{display:none}.burger{display:flex}
+      .about__grid{grid-template-columns:1fr;gap:var(--space-10)}.about__image{order:-1}.about__features{grid-template-columns:1fr 1fr}
+      .catalog__grid{grid-template-columns:1fr 1fr;gap:var(--space-4)}
+      .advantages__grid{grid-template-columns:1fr}.adv-card--wide{grid-column:span 1}
+      .contact__grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}
+      .cta-banner__inner{flex-direction:column;text-align:center}.cta-banner__actions{justify-content:center}
+      .hero__stats{grid-template-columns:1fr}
+      .footer__grid{grid-template-columns:1fr;gap:var(--space-8)}.footer__brand{grid-column:span 1}.footer__bottom{flex-direction:column;text-align:center}
+    }
+    @media(max-width:480px){.catalog__grid{grid-template-columns:1fr}.hero__ctas{flex-direction:column}.hero__ctas .btn{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+
+<div class="announce-bar">
+  🪵 Весенняя акция: скидка 10% на брус при заказе от 5 м³ — <a href="#contact">Узнать подробнее</a>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="logo" aria-label="ЛесТрейд — на главную">
+        <svg width="34" height="34" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="currentColor" opacity="0.13"/>
+          <path d="M6 28L12 10L18 22L22 16L30 28H6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <line x1="18" y1="28" x2="18" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="14" y1="32" x2="22" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        ЛесТрейд
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">О компании</a>
+        <a href="#catalog">Продукция</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn--primary">Получить прайс</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="navigation">
+    <a href="#about">О компании</a>
+    <a href="#catalog">Продукция</a>
+    <a href="#advantages">Преимущества</a>
+    <a href="#contact">Контакты</a>
+    <a href="tel:+77001234567" class="btn btn--primary">Позвонить нам</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Главный баннер">
+    <div class="hero__main">
+      <div class="hero__bg" role="img" aria-label="Производство пиломатериалов"></div>
+      <div class="hero__overlay"></div>
+      <div class="container" style="width:100%">
+        <div class="hero__content">
+          <div class="hero__tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+            Надёжный поставщик с 20__ года
+          </div>
+          <h1 class="hero__title">Пиломатериалы<br><em>оптом</em> по всему<br>Казахстану</h1>
+          <p class="hero__desc">Доска, брус, вагонка и шпунт прямо с производства. Работаем с застройщиками, строительными компаниями и частными клиентами.</p>
+          <div class="hero__ctas">
+            <a href="#catalog" class="btn btn--accent btn--lg">Смотреть каталог</a>
+            <a href="#contact" class="btn btn--outline-white btn--lg">Запросить прайс</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat"><span class="hero__stat-num">15+</span><span class="hero__stat-label">лет на рынке</span></div>
+      <div class="hero__stat"><span class="hero__stat-num">500+</span><span class="hero__stat-label">постоянных клиентов</span></div>
+      <div class="hero__stat"><span class="hero__stat-num">10 000</span><span class="hero__stat-label">м³ в месяц</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container container--narrow">
+      <div class="about__grid">
+        <div class="about__image">
+          <img src="https://picsum.photos/seed/sawmill-work/800/600" alt="Производство пиломатериалов на складе ЛесТрейд" width="800" height="600" loading="lazy">
+          <div class="about__badge">✓ Прямые поставки</div>
+        </div>
+        <div class="about__content">
+          <p class="section-label">О компании</p>
+          <h2 class="section-title">Работаем без посредников — цены ниже рынка</h2>
+          <p class="section-desc">Компания «ЛесТрейд» — прямой поставщик пиломатериалов из Сибири и Алтайского края. Мы не перепродаём чужой товар: у нас собственный склад и налаженные контракты с проверенными лесозаготовительными предприятиями.</p>
+          <div class="about__features">
+            <div class="about__feature"><div class="about__feature-icon">🏭</div><h4>Собственный склад</h4><p>Более 2 000 м² крытого хранения</p></div>
+            <div class="about__feature"><div class="about__feature-icon">🚚</div><h4>Быстрая доставка</h4><p>По Алматы и всему Казахстану</p></div>
+            <div class="about__feature"><div class="about__feature-icon">📋</div><h4>Документация</h4><p>Сертификаты, накладные, счета</p></div>
+            <div class="about__feature"><div class="about__feature-icon">🤝</div><h4>Оптовые условия</h4><p>Индивидуальные цены от 5 м³</p></div>
+          </div>
+          <a href="#contact" class="btn btn--primary btn--lg">Познакомиться с нами</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section id="catalog" class="catalog">
+    <div class="container">
+      <div class="catalog__header">
+        <div>
+          <p class="section-label">Наша продукция</p>
+          <h2 class="section-title">Каталог пиломатериалов</h2>
+          <p class="section-desc">Хвойные и лиственные породы. Сухой и естественной влажности.</p>
+        </div>
+        <a href="#contact" class="btn btn--ghost">Полный прайс-лист →</a>
+      </div>
+      <div class="catalog__grid">
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/wooden-planks/600/450" alt="Доска обрезная сосна" width="600" height="450" loading="lazy"><span class="product-card__tag">Хит продаж</span></div>
+          <div class="product-card__body"><h3 class="product-card__name">Доска обрезная</h3><p class="product-card__desc">Сосна, 1–3 сорт. Сухая и естественной влажности.</p><div class="product-card__specs"><span class="spec-chip">25×150 мм</span><span class="spec-chip">40×150 мм</span><span class="spec-chip">50×150 мм</span><span class="spec-chip">L=6 м</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/timber-beam/600/450" alt="Брус строительный" width="600" height="450" loading="lazy"><span class="product-card__tag">Оптом</span></div>
+          <div class="product-card__body"><h3 class="product-card__name">Брус строительный</h3><p class="product-card__desc">Сосна, 1–2 сорт. Строганый, сухой.</p><div class="product-card__specs"><span class="spec-chip">100×100 мм</span><span class="spec-chip">150×150 мм</span><span class="spec-chip">200×200 мм</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/larch-wood/600/450" alt="Вагонка деревянная" width="600" height="450" loading="lazy"></div>
+          <div class="product-card__body"><h3 class="product-card__name">Вагонка</h3><p class="product-card__desc">Сосна и лиственница. Для внутренней и наружной отделки.</p><div class="product-card__specs"><span class="spec-chip">12×96 мм</span><span class="spec-chip">14×110 мм</span><span class="spec-chip">Класс А</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/floor-boards/600/450" alt="Доска половая шпунтованная" width="600" height="450" loading="lazy"></div>
+          <div class="product-card__body"><h3 class="product-card__name">Доска половая</h3><p class="product-card__desc">Шпунтованная, строганая. Лиственница и сосна.</p><div class="product-card__specs"><span class="spec-chip">28×130 мм</span><span class="spec-chip">36×130 мм</span><span class="spec-chip">Шпунт</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/roofing-timber/600/450" alt="Доска необрезная" width="600" height="450" loading="lazy"></div>
+          <div class="product-card__body"><h3 class="product-card__name">Доска необрезная</h3><p class="product-card__desc">Лиственница, 1–3 сорт. Для опалубки и черновых работ.</p><div class="product-card__specs"><span class="spec-chip">Толщина 25–50 мм</span><span class="spec-chip">L=4–6 м</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-card__img"><img src="https://picsum.photos/seed/formwork-boards/600/450" alt="Опалубочная доска" width="600" height="450" loading="lazy"><span class="product-card__tag">Для строителей</span></div>
+          <div class="product-card__body"><h3 class="product-card__name">Опалубочная доска</h3><p class="product-card__desc">Для монолитного строительства. Многоразовая, с фаской.</p><div class="product-card__specs"><span class="spec-chip">40×150 мм</span><span class="spec-chip">50×150 мм</span><span class="spec-chip">Влажность ≤22%</span></div><div class="product-card__footer"><span class="product-price">от ХХ 000 ₸/м³</span><a href="#contact" class="btn btn--ghost">Запросить цену</a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section id="advantages">
+    <div class="container container--narrow">
+      <p class="section-label">Почему мы</p>
+      <h2 class="section-title">Преимущества работы с нами</h2>
+      <div class="advantages__grid">
+        <div class="adv-card adv-card--wide"><div class="adv-icon">🌲</div><div><h3>Прямые поставки без наценок</h3><p>Работаем напрямую с лесозаготовительными предприятиями Сибири и Алтайского края. Никаких перекупщиков — вы платите только за продукт и логистику.</p></div></div>
+        <div class="adv-card"><div class="adv-icon">⚡</div><div><h3>Отгрузка день в день</h3><p>Весь ассортимент всегда в наличии на складе. Оформляем заявку и отгружаем в течение рабочего дня.</p></div></div>
+        <div class="adv-card"><div class="adv-icon">📐</div><div><h3>Индивидуальный распил</h3><p>Нестандартные размеры, торцовка, нарезка по длине — выполняем на месте по вашему ТЗ.</p></div></div>
+        <div class="adv-card"><div class="adv-icon">🚛</div><div><h3>Доставка по всему Казахстану</h3><p>Собственный автопарк для Алматы и области, партнёры-перевозчики для региональных заказов.</p></div></div>
+        <div class="adv-card"><div class="adv-icon">🏆</div><div><h3>Сертифицированная продукция</h3><p>Вся продукция имеет сертификаты соответствия ГОСТ. Предоставляем полный пакет документов.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <div>
+          <h2>Нужен расчёт стоимости<br>под <em>ваш проект?</em></h2>
+          <p>Оставьте заявку — менеджер свяжется в течение 30 минут и подберёт оптимальный ассортимент и цену.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="#contact" class="btn btn--white btn--lg">Получить расчёт</a>
+          <a href="tel:+77001234567" class="btn btn--outline-white btn--lg">+7 (700) ХХХ-ХХ-ХХ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container container--narrow">
+      <p class="section-label">Контакты</p>
+      <h2 class="section-title">Свяжитесь с нами</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p style="color:var(--color-text-muted);font-size:var(--text-base);max-width:44ch;margin-bottom:var(--space-4)">Мы работаем с понедельника по субботу. Оставьте заявку — и мы сами перезвоним в удобное время.</p>
+          <div class="contact__item"><div class="contact__icon">📍</div><div><p class="contact__item-title">Адрес склада</p><p class="contact__item-text">г. Алматы, ул. Складская, д. ХХ<br>(вблизи объездной дороги)</p></div></div>
+          <div class="contact__item"><div class="contact__icon">📞</div><div><p class="contact__item-title">Телефон</p><p class="contact__item-text"><a href="tel:+77001234567">+7 (700) ХХХ-ХХ-ХХ</a><br>Пн–Сб: 8:00 — 18:00</p></div></div>
+          <div class="contact__item"><div class="contact__icon">✉️</div><div><p class="contact__item-title">E-mail</p><p class="contact__item-text"><a href="mailto:info@lestreid.kz">info@lestreid.kz</a></p></div></div>
+          <div class="contact__item"><div class="contact__icon">💬</div><div><p class="contact__item-title">Мессенджеры</p><p class="contact__item-text">WhatsApp, Telegram:<br>+7 (700) ХХХ-ХХ-ХХ</p></div></div>
+          <div class="map-placeholder"><span>🗺️</span><p>Замените этот блок на iframe карты</p><p style="font-size:var(--text-xs);color:var(--color-text-faint)">Google Maps или 2GIS → «Поделиться» → «Встроить»</p></div>
+        </div>
+        <form class="contact__form" novalidate>
+          <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2)">Оставить заявку</h3>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2)">Ответим в течение 30 минут</p>
+          <div class="form-grid">
+            <div class="form-group"><label for="name">Ваше имя</label><input type="text" id="name" name="name" placeholder="Иван Иванов" autocomplete="name"></div>
+            <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel"></div>
+          </div>
+          <div class="form-group"><label for="product">Вид продукции</label><select id="product" name="product"><option value="">— Выберите из списка —</option><option>Доска обрезная</option><option>Брус строительный</option><option>Вагонка</option><option>Доска половая</option><option>Доска необрезная</option><option>Опалубочная доска</option><option>Другое</option></select></div>
+          <div class="form-group"><label for="volume">Объём (м³) или количество</label><input type="text" id="volume" name="volume" placeholder="Например: 10 м³ или уточним по телефону"></div>
+          <div class="form-group"><label for="message">Комментарий</label><textarea id="message" name="message" placeholder="Размеры, сорт, срочность, адрес доставки..."></textarea></div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Отправить заявку</button>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="/" class="logo"><svg width="30" height="30" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="white" opacity="0.15"/><path d="M6 28L12 10L18 22L22 16L30 28H6Z" stroke="white" stroke-width="2" stroke-linejoin="round" fill="none"/><line x1="18" y1="28" x2="18" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="14" y1="32" x2="22" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/></svg><span style="color:#fff">ЛесТрейд</span></a>
+        <p>Надёжный поставщик пиломатериалов оптом по Алматы и всему Казахстану.</p>
+      </div>
+      <div class="footer__col"><h4>Продукция</h4><ul><li><a href="#catalog">Доска обрезная</a></li><li><a href="#catalog">Брус строительный</a></li><li><a href="#catalog">Вагонка</a></li><li><a href="#catalog">Доска половая</a></li><li><a href="#catalog">Опалубка</a></li></ul></div>
+      <div class="footer__col"><h4>Компания</h4><ul><li><a href="#about">О нас</a></li><li><a href="#advantages">Преимущества</a></li><li><a href="#contact">Контакты</a></li><li><a href="#contact">Доставка</a></li></ul></div>
+      <div class="footer__col"><h4>Контакты</h4><ul><li><a href="tel:+77001234567">+7 (700) ХХХ-ХХ-ХХ</a></li><li><a href="mailto:info@lestreid.kz">info@lestreid.kz</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">Telegram</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 ЛесТрейд. Все права защищены. г. Алматы, Казахстан.</p>
+      <div class="footer__socials">
+        <a href="#" class="social-btn" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="social-btn" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.114.554 4.1 1.523 5.822L.057 23.5l5.806-1.445A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.583-.5-5.076-1.373l-.364-.214-3.764.937.999-3.671-.235-.374A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
+        <a href="#" class="social-btn" aria-label="2GIS"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t=document.querySelector("[data-theme-toggle]"),r=document.documentElement;
+  var d=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
+  r.setAttribute("data-theme",d);
+  var sun='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  var moon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  if(t){t.innerHTML=d==="dark"?sun:moon;t.addEventListener("click",function(){d=d==="dark"?"light":"dark";r.setAttribute("data-theme",d);t.innerHTML=d==="dark"?sun:moon})}
+})();
+var burger=document.getElementById("burger"),menu=document.getElementById("mobileMenu");
+burger.addEventListener("click",function(){var o=menu.classList.toggle("open");burger.classList.toggle("open");burger.setAttribute("aria-expanded",o)});
+menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false")})});
+document.querySelector(".contact__form").addEventListener("submit",function(e){
+  e.preventDefault();var btn=e.target.querySelector("button[type=submit]");
+  btn.textContent="✓ Заявка отправлена!";btn.style.background="#437a22";btn.disabled=true;
+  setTimeout(function(){btn.textContent="Отправить заявку";btn.style.background="";btn.disabled=false;e.target.reset()},4000)
+});
+document.querySelectorAll("a[href^='#']").forEach(function(a){a.addEventListener("click",function(e){var id=a.getAttribute("href");if(id==="#")return;var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:"smooth"})}})});
+var counters=document.querySelectorAll(".hero__stat-num");
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){var el=entry.target,text=el.textContent,num=parseFloat(text.replace(/[^\d.]/g,"")),suffix=text.replace(/[\d.]/g,"");if(!isNaN(num)){var start=0,step=16,inc=num/(1200/step);var timer=setInterval(function(){start+=inc;if(start>=num){start=num;clearInterval(timer)}el.textContent=Math.floor(start)+suffix},step)}obs.unobserve(el)}})},{threshold:0.5});
+counters.forEach(function(c){obs.observe(c)});
+</script>
+</body>
+</html>
