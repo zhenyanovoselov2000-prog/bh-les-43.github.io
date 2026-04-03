@@ -397,6 +397,95 @@
       .about__facts { grid-template-columns: 1fr 1fr; }
       .hero__title { font-size: 2.4rem; }
     }
+  
+    /* ── TECH ──────────────────────────────────────── */
+    .tech__intro {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16); align-items: start;
+      margin-bottom: var(--sp-16);
+    }
+    .tech__lead {
+      font-size: 1.0625rem; color: var(--muted);
+      font-weight: 300; line-height: 1.8;
+    }
+    .tech__stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg); overflow: hidden;
+    }
+    .tech__stat {
+      background: var(--surface); padding: var(--sp-6);
+    }
+    .tech__stat-num {
+      font-family: var(--f-display); font-size: 1.75rem;
+      letter-spacing: -0.02em; margin-bottom: 2px;
+    }
+    .tech__stat-label { font-size: 0.8125rem; color: var(--muted); }
+
+    .tech__grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg); overflow: hidden;
+    }
+    .tech-card {
+      background: var(--surface);
+      display: grid; grid-template-columns: 5fr 4fr;
+      align-items: stretch; overflow: hidden;
+      transition: background var(--ease);
+    }
+    .tech-card:hover { background: #fcfbf9; }
+    .tech-card:nth-child(even) { direction: rtl; }
+    .tech-card:nth-child(even) > * { direction: ltr; }
+    .tech-card__body {
+      padding: var(--sp-8); display: flex;
+      flex-direction: column; gap: var(--sp-4);
+    }
+    .tech-card__num {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--faint);
+    }
+    .tech-card__title {
+      font-family: var(--f-display); font-size: 1.3rem;
+      font-weight: 400; letter-spacing: -0.01em;
+    }
+    .tech-card__desc {
+      font-size: 0.875rem; color: var(--muted); line-height: 1.7;
+    }
+    .tech-card__tags {
+      display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: auto;
+    }
+    .tech-card__img {
+      overflow: hidden;
+    }
+    .tech-card__img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 600ms ease;
+    }
+    .tech-card:hover .tech-card__img img { transform: scale(1.04); }
+
+    .tech__cta {
+      margin-top: var(--sp-6);
+      padding: var(--sp-6) var(--sp-8);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: var(--sp-6);
+    }
+    .tech__cta p { font-size: 0.9375rem; color: var(--muted); }
+    .tech__cta strong { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .tech__intro { grid-template-columns: 1fr; gap: var(--sp-8); }
+      .tech__grid { grid-template-columns: 1fr; }
+      .tech-card { grid-template-columns: 1fr; }
+      .tech-card:nth-child(even) { direction: ltr; }
+      .tech-card__img { aspect-ratio: 16/7; }
+      .tech-card__img img { height: 100%; }
+    }
+
   </style>
 </head>
 <body>
@@ -417,6 +506,7 @@
         <a href="#products">Продукция</a>
         <a href="#about">О компании</a>
         <a href="#delivery">Доставка</a>
+        <a href="#tech">Технологии</a>
         <a href="#contacts">Контакты</a>
       </nav>
       <a href="tel:+78332000000" class="nav__cta">+7 (833) 200-00-00</a>
@@ -429,6 +519,7 @@
     <a href="#products">Продукция</a>
     <a href="#about">О компании</a>
     <a href="#delivery">Доставка и оплата</a>
+    <a href="#tech">Технологии</a>
     <a href="#contacts">Контакты</a>
   </div>
 </header>
@@ -664,11 +755,162 @@
 
   <div class="divider"></div>
 
+  <!-- TECH -->
+  <section class="section" id="tech">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="section__num">03 — Технологии</p>
+        <h2 class="section__title">Наши <em>технологии</em></h2>
+        <p class="section__sub">Современное оборудование позволяет выпускать продукцию стабильного качества — от распиловки до финальной сушки.</p>
+      </div>
+
+      <div class="tech__intro">
+        <p class="tech__lead">
+          Весь процесс — от бревна до готовой доски — проходит на нашей площадке в Белой Холунице. Мы инвестируем в оборудование, чтобы каждая партия соответствовала заявленным размерам и влажности. Геометрия — в допуске ГОСТ, влажность сухих материалов — не более 18%.
+        </p>
+        <div class="tech__stats">
+          <div class="tech__stat">
+            <div class="tech__stat-num">18%</div>
+            <div class="tech__stat-label">макс. влажность сухих материалов</div>
+          </div>
+          <div class="tech__stat">
+            <div class="tech__stat-num">±1 мм</div>
+            <div class="tech__stat-label">допуск по геометрии</div>
+          </div>
+          <div class="tech__stat">
+            <div class="tech__stat-num">6 м³/ч</div>
+            <div class="tech__stat-label">производительность линии</div>
+          </div>
+          <div class="tech__stat">
+            <div class="tech__stat-num">ГОСТ</div>
+            <div class="tech__stat-label">8486-86, 2695-83</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech__grid">
+
+        <!-- 1 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">01 — Распиловка</span>
+            <h3 class="tech-card__title">Ленточнопильный станок</h3>
+            <p class="tech-card__desc">Горизонтальная ленточная пила обеспечивает точный рез по всей длине бревна. Минимальный пропил — меньше отходов, больше выхода готового материала.</p>
+            <div class="tech-card__tags">
+              <span class="chip">Точность ±0,5 мм</span>
+              <span class="chip">Ширина реза до 700 мм</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/bandsaw-mill-pine/600/500"
+                 alt="Ленточнопильный станок" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">02 — Сушка</span>
+            <h3 class="tech-card__title">Сушильная камера</h3>
+            <p class="tech-card__desc">Конвективная сушильная камера объёмом 50 м³. Программируемый режим сушки по ступеням температуры и влажности. Цикл сушки — 7–14 суток в зависимости от породы и толщины.</p>
+            <div class="tech-card__tags">
+              <span class="chip">50 м³ / загрузка</span>
+              <span class="chip">Влажность 8–18%</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/wood-drying-chamber-kiln/600/500"
+                 alt="Сушильная камера" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">03 — Строжка</span>
+            <h3 class="tech-card__title">Четырёхсторонний рейсмус</h3>
+            <p class="tech-card__desc">Обработка четырёх сторон за один проход. Применяется для производства вагонки, половой доски и строганых заготовок. Чистота поверхности — Ra 3.2–6.3.</p>
+            <div class="tech-card__tags">
+              <span class="chip">4 стороны за 1 проход</span>
+              <span class="chip">Скорость до 20 м/мин</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/four-side-planer-machine/600/500"
+                 alt="Четырёхсторонний рейсмус" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">04 — Торцовка</span>
+            <h3 class="tech-card__title">Торцовочная линия</h3>
+            <p class="tech-card__desc">Автоматическая торцовка в размер: 3, 4, 5 и 6 метров. Ровный перпендикулярный торец — важно при укладке пола и обшивке стен. Без сколов и заусенцев.</p>
+            <div class="tech-card__tags">
+              <span class="chip">Длина 3–6 м</span>
+              <span class="chip">Перпендикулярность 90°</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/crosscut-saw-timber/600/500"
+                 alt="Торцовочная линия" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">05 — Шпунтование</span>
+            <h3 class="tech-card__title">Шипорезный фрезер</h3>
+            <p class="tech-card__desc">Нарезка паза и шипа (ТиГ) для половой доски и вагонки. Точная геометрия шпунта обеспечивает плотный замок без зазоров при монтаже.</p>
+            <div class="tech-card__tags">
+              <span class="chip">Профиль ТиГ</span>
+              <span class="chip">Для доски и вагонки</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/tongue-groove-router-wood/600/500"
+                 alt="Шипорезный фрезер" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="tech-card">
+          <div class="tech-card__body">
+            <span class="tech-card__num">06 — Склад</span>
+            <h3 class="tech-card__title">Крытый склад хранения</h3>
+            <p class="tech-card__desc">Крытый склад площадью 500 м² защищает готовую продукцию от осадков и перепадов влажности. Стеллажное хранение с разделением по породам, сортам и размерам.</p>
+            <div class="tech-card__tags">
+              <span class="chip">500 м² площадь</span>
+              <span class="chip">Стеллажное хранение</span>
+            </div>
+          </div>
+          <div class="tech-card__img">
+            <img src="https://picsum.photos/seed/lumber-warehouse-indoor/600/500"
+                 alt="Склад готовой продукции" width="600" height="500" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tech__cta">
+        <p><strong>Хотите приехать и посмотреть производство?</strong><br>Мы открыты для экскурсий по предварительному звонку — покажем оборудование и склад.</p>
+        <a href="#contacts" class="btn-solid">
+          Записаться на осмотр
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- DELIVERY -->
   <section class="section section--alt" id="delivery">
     <div class="wrap">
       <div class="section__head">
-        <p class="section__num">03 — Доставка и оплата</p>
+        <p class="section__num">04 — Доставка и оплата</p>
         <h2 class="section__title">Доставка <em>&</em> оплата</h2>
         <p class="section__sub">Работаем по всей Кировской области. Самовывоз — бесплатно.</p>
       </div>
@@ -717,7 +959,7 @@
   <section class="section" id="contacts">
     <div class="wrap">
       <div class="section__head">
-        <p class="section__num">04 — Контакты</p>
+        <p class="section__num">05 — Контакты</p>
         <h2 class="section__title">Свяжитесь <em>с нами</em></h2>
         <p class="section__sub">Звоните, пишите или приезжайте. Мы на месте с понедельника по субботу.</p>
       </div>
@@ -807,6 +1049,7 @@
         <a href="#products">Продукция</a>
         <a href="#about">О компании</a>
         <a href="#delivery">Доставка</a>
+        <a href="#tech">Технологии</a>
         <a href="#contacts">Контакты</a>
       </nav>
       <p class="footer__copy">© 2026 ЛесТрейд · Белая Холуница</p>
